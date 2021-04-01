@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Test</title>
+    <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+    <style>
+        *{padding: 0; margin: 0; box-sizing: border-box; font-family: 'Josefin Sans', sans-serif;}
+        .mainDiv{
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            background-color: skyblue;
+        }
+        .centerDiv{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        h1{
+            text-transform: capitalize;
+            margin-bottom: 30px;
+            color:#ecf0f1;
+            text-shadow: 4px 3px 3px black;
+            font-size: 2.1rem;
+        }
+        h2{text-align: center;}
+        textarea{
+            background-color: #444;
+            box-shadow: 0 0 1px rgba(0,0,0,0.5);
+            border-radius: 10px;
+            border: 15px solid #34495e;
+            color: white;
+            font-size: 1.3rem;
+        }
+        .mainbtn{
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: 4px solid gray;
+            background: #ecf0f1;
+            font-size: 1rem;
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="mainDiv">
+        <div class="centerDiv">
+            <h1>Welcome To Typing Speed Test</h1>
+            <h2 id="msg">  </h2>
+            <br>
+            <textarea name="" id="mywords" cols="100" rows="10" placeholder="Remember, be nice!"> </textarea>
+            <br>
+            <button id="btn" class="mainbtn">Start</button>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
