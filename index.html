@@ -45,7 +45,11 @@
             font-size: 1rem;
             outline: none;
         }
-
+        #btn{
+        width: 60px;
+    padding: 3px;
+    border-radius: 6px;
+        }
     </style>
 </head>
 <body>
@@ -56,11 +60,44 @@
             <br>
             <textarea name="" id="mywords" cols="100" rows="10" placeholder="Remember, be nice!"> </textarea>
             <br>
-            <button id="btn" class="mainbtn">Start</button>
-
+            <button id="btn" cl ass="mainbtn">Start</button>
         </div>
-
     </div>
-    
+    <script>
+        const setOfWords = [
+            "My name is Ali Raza  and I am a web developer.",
+            "Hope  you are having fun this is a simple game you can make.",
+            "I am muslim Am from pakistan."
+        ]; 
+            const msg  = document.getElementById('msg');
+            const typeWords  = document.getElementById('mywords');
+            const btn  = document.getElementById('btn');
+            let startTime , endTime;
+          const  playGame = () => {
+                let randomNumber = Math.floor(Math.random()*setOfWords.length);
+                msg.innerText = setOfWords[randomNumber];
+                let date = new Date();
+                startTime = date.getTime();
+                btn.innerText = "Done";
+            }
+            const endPlay = () => {
+                let date = new Date();
+                endTime = date.getTime();
+                let totalTime = ((endTime - startTime)/ 1000);
+
+            }
+
+            btn.addEventListener('click', function(){
+                if(this.innerText == 'Start'){
+                    typeWords.disable = false;
+                    playGame();
+                }else if (this.innerText == "Done"){
+                    typeWords.disabled = true;
+                    btn.innerText = "start";
+                    endPlay();
+                }
+            });
+
+    </script>
 </body>
 </html>
