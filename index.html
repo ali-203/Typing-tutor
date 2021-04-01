@@ -56,9 +56,10 @@
             outline: none;
         }
         #btn{
-        width: 60px;
-    padding: 3px;
-    border-radius: 6px;
+            width: 80px;
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 16px;
         }
     </style>
 </head>
@@ -103,7 +104,7 @@
                     playGame();
                 }else if (this.innerText == "Done"){
                     typeWords.disabled = true;
-                    btn.innerText = "start";
+                    btn.innerText = "Start";
                     endPlay();
                 }
             });
