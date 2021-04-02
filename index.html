@@ -75,11 +75,13 @@
         </div>
     </div>
     <script>
+        //Create Array 
         const setOfWords = [
             "My name is Ali Raza  and I am a web developer.",
             "Hope  you are having fun this is a simple game you can make.",
             "I am muslim Am from pakistan."
         ]; 
+        // GET id And set Time Done
             const msg  = document.getElementById('msg');
             const typeWords  = document.getElementById('mywords');
             const btn  = document.getElementById('btn');
@@ -91,7 +93,7 @@
                 startTime = date.getTime();
                 btn.innerText = "Done";
             }
-
+// Timer on Game 
             const endPlay = () => {
                 let date = new Date();
                 endTime = date.getTime();
@@ -105,6 +107,8 @@
                 finalMsg += compareWords(msg.innerText,totalStr);
                 msg.innerText = finalMsg;
             }
+
+            // Dont undestand 
             const compareWords = (str1, str2) => {
                 let words1 = str1.split(" ");
                 let words2 = str2.split(" ");
@@ -117,11 +121,8 @@
             })
 
          let errorWords = ( words1.length - cnt );
-         return (cnt + " correct out of " + words1.length + " words and the total number of arror are "+ errorWords + ".");
+         return (cnt + " correct out of " + words1.length + " words and the total number of error are "+ errorWords + ".");
             }
-
-
-
 
          const wordCounter = (str) => {
                 let response = str.split("").length;
@@ -129,9 +130,6 @@
                 return response;
             }
 
-
-
- 
             btn.addEventListener('click', function(){
                 if(this.innerText == 'Start'){
                     typeWords.disable = false;
