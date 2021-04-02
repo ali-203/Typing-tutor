@@ -43,10 +43,7 @@
                max-width: 450px;
                
             }
-
         }
-
-
         .mainbtn{
             padding: 10px 20px;
             border-radius: 20px;
@@ -128,11 +125,11 @@
                 let response = str.split("").length;
                 console.log(response);
                 return response;
-            }
+            } 
 
             btn.addEventListener('click', function(){
                 if(this.innerText == 'Start'){
-                    typeWords.disable = false;
+                    typeWords.disable = false; 
                     playGame();
                 }else if (this.innerText == "Done"){
                     typeWords.disabled = true;
